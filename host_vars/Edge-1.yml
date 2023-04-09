@@ -1,0 +1,33 @@
+---
+
+hostname: Edge-1
+
+loopback: { ip: 2.2.2.2 }
+
+interfaces: 
+ - name: Ethernet1/0
+   ip: 192.168.23.2
+   subnet: 255.255.255.0
+
+ospf_as: 10
+router_id: 2.2.2.2
+networks:
+ - 192.168.23.0 0.0.0.255
+ - 2.2.2.2 0.0.0.0
+
+bgp_as: 10
+neighbors:
+ - ip: 1.1.1.1
+   bgp_as: 10
+
+ - ip: 3.3.3.3
+   bgp_as: 10
+
+
+
+
+
+
+
+
+
