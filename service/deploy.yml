@@ -1,0 +1,19 @@
+---
+
+- name: Configuration Edge-1
+  hosts: Edge-1
+  connection: network_cli
+  
+  tasks:
+    - name: Put Config
+      ios_config:
+        src: "Configuration/Edge-1.cfg"
+
+- name: Configuration Edge-2
+  hosts: Edge-2
+  connection: network_cli
+  
+  tasks:
+    - name: Put Config
+      ios_config:
+        src: "Configuration/Edge-2.cfg"

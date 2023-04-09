@@ -1,0 +1,17 @@
+ip vrf {{ vrf_name }}
+ rd {{ rd_id }}:{{ rd_t }}
+ route-target both {{ rd_id }}:{{ rd_id }}
+!
+{% for intf in interfaces %}
+interface {{ intf.name }}
+ description Cusromer
+ ip vrf forwarding {{ vrf_name }}
+ ip address {{ intf.ip }} {{ intf.subnet }}
+ no shutdown
+ exit
+{% endfor %}
+!
+router b {{ bgp_as }}
+address-family ipv4 vrf {{ vrf_name }}
+ redistribute connected
+ exit

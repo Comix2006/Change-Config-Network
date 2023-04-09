@@ -1,0 +1,12 @@
+---
+
+- name: Create Configuration
+  hosts: Edge
+  gather_facts: false
+  connection: network_cli
+
+
+  tasks:
+    - template:
+        src: MPLS.j2
+        dest: "Configuration/{{inventory_hostname}}.cfg"
