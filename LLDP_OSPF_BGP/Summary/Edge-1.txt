@@ -1,0 +1,26 @@
+LLDP neighbors
+------------------------------------
+Capability codes:
+    (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
+    (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
+
+Device ID           Local Intf     Hold-time  Capability      Port ID
+Core                Et1/0          120        R               Et1/0
+
+Total entries displayed: 1
+
+
+OPSF Peers
+------------------------------------
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+1.1.1.1           1   FULL/BDR        00:00:33    192.168.23.3    Ethernet1/0
+
+
+BGP Peers
+------------------------------------
+BGP router identifier 2.2.2.2, local AS number 10
+BGP table version is 1, main routing table version 1
+
+Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+1.1.1.1         4           10       2       3        1    0    0 00:00:54        0
+3.3.3.3         4           10       2       2        1    0    0 00:00:39        0
