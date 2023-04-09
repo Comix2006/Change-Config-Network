@@ -1,0 +1,16 @@
+---
+
+- name: Configuration Devices
+  hosts: all
+  gather_facts: false
+  connection: network_cli
+
+  tasks:
+    - name: Generate Config
+      template:
+        src: Configuration.j2
+        dest: "Configuration/{{inventory_hostname}}.cfg"
+
+
+
+
