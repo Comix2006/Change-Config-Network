@@ -1,2 +1,5 @@
-# Change-Config-Network
-Change Config Network
+1. Add Configuration files "fabric.yml"
+2. Deploy this configuration "depoy.yml"
+3. Check LLDP, OSPF, BGP nrighbors "LLDP_OSPF_BGP/Check_Peers.yml"
+4. Add Configuration services files "service/service.yml"
+5. Deploy this services configuration "deploy.yml" 
